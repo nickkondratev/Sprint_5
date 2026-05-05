@@ -1,93 +1,92 @@
 from selenium.webdriver.common.by import By
 
 class Locators:
-    # ===== ШАПКА (на всех страницах) =====
+    #***шапка***
     
-    # Ссылка «Конструктор» — ведёт на главную
+    #конструктор
     CONSTRUCTOR_LINK = (By.XPATH, "//p[contains(text(),'Конструктор')]")
     
-    # Ссылка «Лента Заказов»
+    #лента заказов
     ORDER_FEED_LINK = (By.XPATH, "//p[contains(text(),'Лента Заказов')]")
     
-    # Логотип Stellar Burgers — кликабельный
+    #лого
     LOGO = (By.XPATH, "//div[contains(@class,'logo')]")
     
-    # Ссылка «Личный Кабинет» — ведёт на /account
+    #личный кабинет
     PERSONAL_ACCOUNT_LINK = (By.XPATH, "//a[@href='/account']")
 
 
-    # ===== ГЛАВНАЯ СТРАНИЦА =====
+    #***главная страница***
     
-    # Кнопка «Войти в аккаунт» (видна, если не авторизован)
+    #войти в аккаунт
     LOGIN_TO_ACCOUNT_BUTTON = (By.XPATH, "//button[contains(text(),'Войти в аккаунт')]")
     
-    # Кнопка «Оформить заказ» (видна, если авторизован)
+    #оформить заказ
     ORDER_BUTTON = (By.XPATH, "//button[contains(text(),'Оформить заказ')]")
 
 
-    # ===== КОНСТРУКТОР (вкладки) =====
+    #***конструктор***
     
-    # Вкладка «Булки»
+    #булки
     BUNS_TAB = (By.XPATH, "//span[contains(text(),'Булки')]")
     
-    # Вкладка «Соусы»
+    #соусы
     SAUCES_TAB = (By.XPATH, "//span[contains(text(),'Соусы')]")
     
-    # Вкладка «Начинки»
+    #начинки
     FILLINGS_TAB = (By.XPATH, "//span[contains(text(),'Начинки')]")
     
-    # Активная (выделенная) вкладка — у неё особый класс
+    #актвная вкладка
     ACTIVE_TAB = (By.XPATH, "//div[contains(@class,'tab_tab_type_current__')]")
 
 
-    # ===== РЕГИСТРАЦИЯ (/register) =====
+    #***регистрация***
     
-    # Поле «Имя» — первое поле ввода с name='name' на странице регистрации
+    #имя
     NAME_INPUT = (By.XPATH, "(//input[@name='name'])[1]")
     
-    # Поле «Email» — второе поле с name='name' на странице регистрации
+    #почта
     EMAIL_INPUT = (By.XPATH, "(//input[@name='name'])[2]")
     
-    # Поле «Пароль» — единственное поле с type='password'
+    # пароль
     PASSWORD_INPUT = (By.XPATH, "//input[@type='password']")
     
-    # Кнопка «Зарегистрироваться»
+    #зарегистрироваться
     REGISTER_BUTTON = (By.XPATH, "//button[contains(text(),'Зарегистрироваться')]")
     
-    # Ошибка под полем пароля (появляется при пароле < 6 символов)
+    #ошибка
     PASSWORD_ERROR = (By.XPATH, "//p[contains(@class,'input__error')]")
 
 
-    # ===== ВХОД (/login) =====
-    
-    # Поле Email на странице входа (единственное поле с name="name")
+    #***вход***
+
+    #почта
     LOGIN_EMAIL_INPUT = (By.XPATH, "//input[@name='name']")
     
-    # Поле Пароль на странице входа
+    #пароль
     LOGIN_PASSWORD_INPUT = (By.XPATH, "//input[@type='password']")
     
-    # Кнопка «Войти» на странице входа
+    #войти
     LOGIN_BUTTON = (By.XPATH, "//button[contains(text(),'Войти')]")
     
-    # Ссылка «Зарегистрироваться» на странице входа
+    #зарегистрироваться
     REGISTER_LINK = (By.XPATH, "//a[contains(text(),'Зарегистрироваться')]")
     
-    # Ссылка «Войти» на странице регистрации
+    #войти
     LOGIN_LINK = (By.XPATH, "//a[contains(text(),'Войти')]")
     
-    # Ссылка «Восстановить пароль» на странице входа
+    #восстановить пароль
     RESTORE_PASSWORD_LINK = (By.XPATH, "//a[contains(text(),'Восстановить пароль')]")
 
-    # ===== ВОССТАНОВЛЕНИЕ ПАРОЛЯ (/forgot-password) =====
+    #***восстановление пароля***
     
-    # Ссылка «Войти» на странице восстановления пароля
+    #войти
     RESTORE_LOGIN_LINK = (By.XPATH, "//a[contains(text(),'Войти')]")
 
-
-    # ===== ЛИЧНЫЙ КАБИНЕТ (/account) =====
+    #***лк***
     
-    # Кнопка «Выход»
+    #выход
     LOGOUT_BUTTON = (By.XPATH, "//button[contains(text(),'Выход')]")
     
-    # Ссылка «Профиль» — проверка, что мы в ЛК
+    #профиль
     PROFILE_LINK = (By.XPATH, "//a[contains(text(),'Профиль')]")
